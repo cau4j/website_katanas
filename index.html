@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reino Medieval — Projeto de E-commerce Conceitual</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cor-fundo: #0d0d0d;
+            --cor-dourado: #c9a25e;
+            --cor-texto: #f0f0f0;
+
+            --espaco-sm: 20px;
+            --espaco-md: 40px;
+            --espaco-lg: 80px;
+            --espaco-xl: 150px;
+        }
+
+        body {
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            font-family: 'Cinzel', serif;
+        }
+
+        /*--header--*/
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--espaco-md);
+        }
+
+        .logo {
+            height: 95px;
+        }
+
+        /*--hero--*/
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--cor-dourado);
+            font-size: 50px;
+            letter-spacing: 9px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-align: center;
+            gap: 40px;
+            margin-top: var(--espaco-xl);
+        }
+        
+        .numero {
+            font-size: 30px;
+            color: var(--cor-dourado);
+        }
+        
+        .descricao {
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+
+        .stat:not(:first-child) {
+            border-left: 1px solid var(--cor-dourado);
+            padding-left: var(--espaco-sm);
+        }
+
+        .navegacao {
+            display: flex;
+            gap: var(--espaco-lg);
+            align-items: center;   
+        }
+
+        .navegacao a {
+            text-decoration: none;
+            color: var(--cor-texto);
+        }
+
+        .ativo {
+            color: #a83232;
+            border-bottom: 2px solid #a83232 ;
+            padding-bottom: 5px;
+        }
+
+        p {
+            font-size: 20px;
+            color: var(--cor-dourado);
+        }
+
+        h2 {
+            font-size: 40px;
+            color: var(--cor-dourado);
+            margin-bottom: 5px;
+        }
+
+        h2::before,
+        h2::after {
+            content: "";
+            display: inline-block;
+            width: 60px;
+            height: 2px;
+            background-color: #a83232;
+            margin: 0 20px;
+            vertical-align: middle;
+        }
+
+        .katana {
+            padding-top: var(--espaco-lg);
+        }
+
+        .icone-arraste {
+            width: 50px;
+            height: 50px;
+            border: 1px solid var(--cor-dourado);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--cor-dourado);
+            font-size: 30px;
+            margin: 20px auto 10px;
+        }
+
+        .texto-arraste {
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+
+        <a href="#">
+            <img class="logo" src="REINO MEDIEVAL LOGO.png" alt="Logo Tenda Medieval">
+        </a>
+            <nav class="navegacao">
+                <a href="#">ESPADAS</a>
+                <a href="#" class="ativo">KATANAS</a>
+                <a href="#">ESCUDOS</a>
+                <a href="#">ACESSÓRIOS</a>
+                <a href="#">SOBRE NÓS</a>
+                <a href="#">CONTATO</a>
+                <a href="#" class="carrinho">🛒</a>
+            </nav>
+
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h1>KATANA ARTESANAL</h1>
+            <h2>武士の魂</h2>
+            <p>ARRASTE PARA REVELAR A LÂMINA</p>
+            <img class="katana" src="KATANA.png" alt="Imagem de uma katana artesanal">
+
+            <div class="arraste">
+                <div class="icone-arraste">↔</div>
+                <p class="texto-arraste">ARRASTE PARA ABRIR</p>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="stat">
+                <div class="numero">10%</div>
+                <div class="descricao">AÇO CARBONO 1060</div>
+            </div>
+
+            <div class="stat">
+                <div class="numero">30%</div>
+                <div class="descricao">FORJADA A MÃO</div>
+            </div>
+
+            <div class="stat">
+                <div class="numero">60%</div>
+                <div class="descricao">TÊMPERA DIFERENCIAL</div>
+            </div>
+
+            <div class="stat">
+                <div class="numero">100%</div>
+                <div class="descricao">TRADIÇÃO E PERFEIÇÃO</div>
+            </div>
+        </section>
+
+     </main>
+    
+</body>
+</html>
